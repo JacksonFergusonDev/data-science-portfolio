@@ -21,7 +21,10 @@ dependencies = [
 
 [dependency-groups]
 dev = [
+    "nbmake>=1.5.5",
     "pre-commit>=4.5.1",
+    "pytest>=9.0.2",
+    "ruff>=0.14.13",
 ]
 
 [tool.ruff]
@@ -29,15 +32,32 @@ target-version = "py312"
 line-length = 88
 
 [tool.ruff.lint]
-# Enable specific rule sets to signal you care about code quality:
-# E: pycodestyle (standard formatting)
-# F: Pyflakes (logical errors)
-# I: isort (organizes imports automatically)
-# B: flake8-bugbear (catches likely bugs/design flaws)
-# N: pep8-naming (enforces standard variable naming conventions)
+# Enable specific rule sets:
+# E: pycodestyle
+# F: Pyflakes
+# I: isort
+# B: flake8-bugbear
+# N: pep8-naming
 select = ["E", "F", "I", "B", "N"]
 
-ignore = []
+# Ignore rules that conflict with scientific notation and notebook workflows
+ignore = [
+    "N802", # Function name should be lowercase (allows 'sample_H0')
+    "N803", # Argument name should be lowercase (allows 'M_sol')
+    "N806", # Variable in function should be lowercase (allows 'N', 'X', 'T')
+    "N816", # Variable in global scope should not be mixedCase (allows 'M_sol')
+    "E501", # Line too long (handled by ruff-format, not linter)
+]
 
 [tool.ruff.lint.isort]
 known-third-party = ["numpy", "pandas", "scipy", "astropy", "matplotlib"]
+
+[tool.pytest.ini_options]
+addopts = "--nbmake"
+testpaths = [
+    "astrophysics",
+    "atmospheric_science",
+    "computational_modeling",
+]
+# Ignore the large data directory if it contains non-notebook files that confuse pytest
+norecursedirs = ["data", "images"]

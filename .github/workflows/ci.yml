@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+
+      - name: Set up Python
+        run: uv python install 3.12
+
+      - name: Install dependencies
+        run: uv sync --all-extras --dev
+
+      - name: Lint (Ruff)
+        run: uv run ruff check .
+
+      - name: Format Check (Ruff)
+        run: uv run ruff format --check .
+
+      - name: Run Notebook Regression Tests
+        # This runs all notebooks in the repo to ensure no runtime errors.
+        # We increase timeout because MCMC/Monte Carlo simulations can be heavy.
+        run: uv run pytest --nbmake --nbmake-timeout=600
