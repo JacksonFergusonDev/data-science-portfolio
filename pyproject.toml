@@ -1,0 +1,38 @@
+[project]
+name = "data-science-portfolio"
+version = "1.0.0"
+description = "A computational astrophysics and atmospheric science portfolio demonstrating statistical modeling, dark matter analysis, and Monte Carlo simulations using modern Python data pipelines."
+readme = "README.md"
+requires-python = ">=3.14"
+license = { file = "LICENSE" }
+authors = [
+    { name = "Jackson Ferguson", email = "jackson.ferguson0@gmail.com" }
+]
+dependencies = [
+    "astropy>=6.0",
+    "jupyterlab>=4.0",
+    "matplotlib>=3.8",
+    "numpy>=1.26",
+    "pandas>=2.2",
+    "scikit-learn>=1.4",
+    "scipy>=1.12",
+    "sympy>=1.12",
+]
+
+[tool.ruff]
+target-version = "py314"
+line-length = 88
+
+[tool.ruff.lint]
+# Enable specific rule sets to signal you care about code quality:
+# E: pycodestyle (standard formatting)
+# F: Pyflakes (logical errors)
+# I: isort (organizes imports automatically)
+# B: flake8-bugbear (catches likely bugs/design flaws)
+# N: pep8-naming (enforces standard variable naming conventions)
+select = ["E", "F", "I", "B", "N"]
+
+ignore = []
+
+[tool.ruff.lint.isort]
+known-third-party = ["numpy", "pandas", "scipy", "astropy", "matplotlib"]
