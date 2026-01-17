@@ -1,6 +1,6 @@
 # Data Science & Computational Physics Portfolio
 
-![Python](https://img.shields.io/badge/Python-3.11%2B-blue)
+![Python](https://img.shields.io/badge/Python-3.12%2B-blue)
 ![License](https://img.shields.io/badge/License-MIT-purple)
 ![Status](https://img.shields.io/badge/Status-Active-success)
 
@@ -71,7 +71,7 @@ An exploration of stochastic processes and non-linear parameter estimation. This
 
 The analyses in this portfolio are built using a standard scientific Python stack, emphasizing vectorization and reproducibility.
 
-* **Language:** Python 3.11+
+* **Language:** Python 3.12+
 * **Data Structures:** `Pandas`, `NumPy`
 * **Scientific Computing:** `SciPy` (Optimization, Integration, Stats), `Astropy` (Cosmology, Units)
 * **Visualization:** `Matplotlib`, `Seaborn`
@@ -89,23 +89,37 @@ To reproduce the analysis for any project in this portfolio:
     cd data-science-portfolio
     ```
 
-2.  **Install shared dependencies:**
+2.  **Environment Setup:**
+
+    **Modern (Recommended):**
+    This project is managed with [uv](https://github.com/astral-sh/uv). This will automatically handle Python versioning and virtual environments.
+    ```bash
+    # Sync dependencies and build the environment
+    uv sync
+    ```
+
+    **Legacy (pip):**
+    If you do not have `uv` installed, you can use standard pip:
     ```bash
     pip install -r requirements.txt
     ```
 
-3.  **Navigate to a project and launch Jupyter:**
+3.  **Launch the Lab:**
     ```bash
-    cd astrophysics  # or atmospheric_science, computational_modeling
-    jupyter notebook
+    # Launch Jupyter Lab within the managed environment
+    uv run jupyter lab
     ```
 
 ---
 
-### Author
+## Author
 
 **Jackson Ferguson**
 
 *Astrophysics Undergraduate, University of Victoria*
 
 [LinkedIn](https://www.linkedin.com/in/jackson--ferguson/) | [GitHub](https://github.com/JacksonFergusonDev)
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
