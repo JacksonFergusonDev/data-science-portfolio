@@ -112,10 +112,14 @@ To reproduce the analysis for any project in this portfolio:
 
 ---
 
-### Author
+## Author
 
 **Jackson Ferguson**
 
 *Astrophysics Undergraduate, University of Victoria*
 
 [LinkedIn](https://www.linkedin.com/in/jackson--ferguson/) | [GitHub](https://github.com/JacksonFergusonDev)
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
