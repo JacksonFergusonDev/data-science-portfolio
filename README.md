@@ -2,6 +2,7 @@
 
 ![Python](https://img.shields.io/badge/Python-3.12%2B-blue)
 ![License](https://img.shields.io/badge/License-MIT-purple)
+[![CI](https://github.com/JacksonFergusonDev/data-science-portfolio/actions/workflows/ci.yml/badge.svg)](https://github.com/JacksonFergusonDev/data-science-portfolio/actions/workflows/ci.yml)
 ![Status](https://img.shields.io/badge/Status-Active-success)
 
 **A collection of computational pipelines bridging theoretical astrophysics, atmospheric science, and statistical inference.**
@@ -75,11 +76,14 @@ The analyses in this portfolio are built using a standard scientific Python stac
 * **Data Structures:** `Pandas`, `NumPy`
 * **Scientific Computing:** `SciPy` (Optimization, Integration, Stats), `Astropy` (Cosmology, Units)
 * **Visualization:** `Matplotlib`, `Seaborn`
-* **Environment:** Jupyter Notebooks
+* **DevOps & CI/CD:** GitHub Actions (Automated Notebook Regression Testing via `nbmake`)
+* **Environment:** Jupyter Notebooks (Managed via `uv`)
 
 ---
 
 ## 🚀 Getting Started
+
+*Note: This repository utilizes a Continuous Integration (CI) pipeline. Every Pull Request triggers a full regression test where all notebooks are re-executed from scratch to ensure results remain reproducible.*
 
 To reproduce the analysis for any project in this portfolio:
 
