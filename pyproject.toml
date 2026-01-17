@@ -43,3 +43,13 @@ ignore = []
 
 [tool.ruff.lint.isort]
 known-third-party = ["numpy", "pandas", "scipy", "astropy", "matplotlib"]
+
+[tool.pytest.ini_options]
+addopts = "--nbmake"
+testpaths = [
+    "astrophysics",
+    "atmospheric_science",
+    "computational_modeling",
+]
+# Ignore the large data directory if it contains non-notebook files that confuse pytest
+norecursedirs = ["data", "images"]
