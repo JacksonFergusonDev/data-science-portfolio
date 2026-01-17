@@ -3,7 +3,7 @@ name = "data-science-portfolio"
 version = "1.0.0"
 description = "A computational astrophysics and atmospheric science portfolio demonstrating statistical modeling, dark matter analysis, and Monte Carlo simulations using modern Python data pipelines."
 readme = "README.md"
-requires-python = ">=3.14"
+requires-python = ">=3.12"
 license = { file = "LICENSE" }
 authors = [
     { name = "Jackson Ferguson", email = "jackson.ferguson0@gmail.com" }
@@ -25,7 +25,7 @@ dev = [
 ]
 
 [tool.ruff]
-target-version = "py314"
+target-version = "py312"
 line-length = 88
 
 [tool.ruff.lint]
