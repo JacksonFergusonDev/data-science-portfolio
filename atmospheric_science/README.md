@@ -1,7 +1,8 @@
 # Exoplanet Atmospheric Analysis Pipeline
 
 [![Return to Portfolio](https://img.shields.io/badge/⬅️_Back_to-Main_Portfolio-grey)](../README.md)
-![Python](https://img.shields.io/badge/Python-3.11%2B-blue)
+![Python](https://img.shields.io/badge/Python-3.12%2B-blue)
+[![CI](https://github.com/JacksonFergusonDev/data-science-portfolio/actions/workflows/ci.yml/badge.svg)](https://github.com/JacksonFergusonDev/data-science-portfolio/actions/workflows/ci.yml)
 ![SciPy](https://img.shields.io/badge/SciPy-Integration-orange)
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-Visualization-green)
 
@@ -50,8 +51,8 @@ $$P = \frac{F_{SW} \cdot (1 - \alpha)}{L_v}$$
 *We validate the mechanical stability of the atmosphere and reconstruct missing sensor data using physical laws.*
 
 <p float="left">
-  <img src="images/hydrostatic_equilibrium.png" width="48%" />
-  <img src="images/temperature_vs_pressure.png" width="48%" /> 
+  <img src="figures/hydrostatic_equilibrium.svg" width="48%" />
+  <img src="figures/temperature_vs_pressure.svg" width="48%" />
 </p>
 
 * **Left:** Hydrostatic Equilibrium Verification. The linear relationship between pressure ($P$) and vertical gradient ($dp/dz$) across all five probes confirms the atmosphere is in global hydrostatic balance.
@@ -60,8 +61,8 @@ $$P = \frac{F_{SW} \cdot (1 - \alpha)}{L_v}$$
 ### 2. Hydrology & Thermodynamics
 *Derived parameters characterizing the planet's water cycle and opacity.*
 
-<p float="left">
-  <img src="images/relative_humidity_vs_pressure.png" width="48%" />
+<p align="center">
+  <img src="figures/relative_humidity_vs_pressure.svg" width="48%" />
 </p>
 
 * Relative Humidity Profile. The vertical distribution of humidity shows a clear structure, allowing us to integrate the total precipitable water vapor (PWV) and estimate the opacity ($\tau$) of the atmosphere to infrared radiation.
@@ -108,7 +109,17 @@ To reproduce this analysis locally:
     cd data-science-portfolio
     ```
 
-2.  **Install shared dependencies:**
+2.  **Environment Setup:**
+
+    **Modern (Recommended):**
+    This project is managed with [uv](https://github.com/astral-sh/uv). This will automatically handle Python versioning and virtual environments.
+    ```bash
+    # Sync dependencies and build the environment
+    uv sync
+    ```
+
+    **Legacy (pip):**
+    If you do not have `uv` installed, you can use standard pip:
     ```bash
     pip install -r requirements.txt
     ```
