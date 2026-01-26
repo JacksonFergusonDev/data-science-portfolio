@@ -1,7 +1,8 @@
 # Monte Carlo Simulation and Statistical Inference
 
 [![Return to Portfolio](https://img.shields.io/badge/⬅️_Back_to-Main_Portfolio-grey)](../README.md)
-![Python](https://img.shields.io/badge/Python-3.11%2B-blue)
+![Python](https://img.shields.io/badge/Python-3.12%2B-blue)
+[![CI](https://github.com/JacksonFergusonDev/data-science-portfolio/actions/workflows/ci.yml/badge.svg)](https://github.com/JacksonFergusonDev/data-science-portfolio/actions/workflows/ci.yml)
 ![SciPy](https://img.shields.io/badge/SciPy-Integration-orange)
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-Visualization-green)
 
@@ -33,7 +34,7 @@ The analysis moves from fundamental probability theory to applied particle trans
 ## 📊 Key Figures & Computational Methods
 
 ### 1. Convergence to Normal Distribution (The Central Limit Theorem)
-![Convergence to Normal Distribution](images/z2_z3_z6_histograms.png)
+![Convergence to Normal Distribution](figures/z2_z3_z6_histograms.svg)
 
 **Visualizing the emergence of Gaussian behavior from deterministic randomness.**
 
@@ -50,7 +51,7 @@ This figure demonstrates the **Central Limit Theorem (CLT)** in action by summin
 * **Irwin-Hall Distribution:** While $Z_N$ formally follows the piece-wise polynomial Irwin-Hall distribution, this plot illustrates how quickly the repeated convolution of "boxcar" functions smooths into the "Bell Curve" characteristic of error distributions in physical measurements.
 
 ### 2. Non-Linear Parameter Estimation & Uncertainty Quantification
-![Non-Linear Model Fit](images/model_comparison.png)
+![Non-Linear Model Fit](figures/model_comparison.svg)
 
 **Extracting physical parameters from noisy observations via $\chi^2$ minimization.**
 
@@ -65,7 +66,7 @@ This figure illustrates a standard problem in experimental astrophysics: recover
 * **Parameter Sensitivity:** Notice that the frequency parameter $\beta$ is constrained much more tightly ($\sim 0.7\%$) than the amplitude parameter $\alpha$ ($\sim 5\%$). This reflects a physical reality: phase/frequency shifts penalize the fit residuals much more aggressively than amplitude scaling does.
 
 ### 3. Monte Carlo Particle Transport & Attenuation
-![Particle Attenuation Simulation](images/particle_attenuation.png)
+![Particle Attenuation Simulation](figures/particle_attenuation.svg)
 
 **Simulating radiative transfer processes via vectorized inverse transform sampling.**
 
@@ -108,7 +109,17 @@ To reproduce this analysis locally:
     cd data-science-portfolio
     ```
 
-2.  **Install shared dependencies:**
+2.  **Environment Setup:**
+
+    **Modern (Recommended):**
+    This project is managed with [uv](https://github.com/astral-sh/uv). This will automatically handle Python versioning and virtual environments.
+    ```bash
+    # Sync dependencies and build the environment
+    uv sync
+    ```
+
+    **Legacy (pip):**
+    If you do not have `uv` installed, you can use standard pip:
     ```bash
     pip install -r requirements.txt
     ```

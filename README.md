@@ -32,7 +32,7 @@ A computational pipeline designed to estimate the dynamical mass of the galaxy c
 * **Key Result:** Calculated a Mass-to-Light ratio of **$291 \pm 60 M_{\odot}/L_{\odot}$**, providing kinematic evidence that >95% of the cluster's mass is non-luminous.
 
 <p align="center">
-  <img src="astrophysics/images/gmm_redshift_distribution.png" width="60%" />
+  <img src="astrophysics/figures/gmm_redshift_distribution.svg" width="65%" />
 </p>
 <p align="center"><em>Redshift distribution analysis. The data favors a single Gaussian profile (red) over a mixture model, indicating the cluster is likely virialized and not currently undergoing a major merger.</em></p>
 
@@ -47,7 +47,7 @@ A numerical reconstruction of the thermodynamic profile of a high-gravity ($g = 
 * **Key Result:** Identified a stable troposphere with a global precipitation rate of **$0.086 \text{ mm/hr}$**, recovering missing sensor data through physical law inversion.
 
 <p align="center">
-  <img src="atmospheric_science/images/temperature_vs_pressure.png" width="60%" />
+  <img src="atmospheric_science/figures/temperature_vs_pressure.svg" width="65%" />
 </p>
 <p align="center"><em>Reconstructed temperature profiles validating hydrostatic equilibrium across multiple probes.</em></p>
 
@@ -62,7 +62,7 @@ An exploration of stochastic processes and non-linear parameter estimation. This
 * **Key Result:** Empirically verified the Beer-Lambert law via discrete particle transport and validated variance scaling laws ($1/\sqrt{N}$).
 
 <p align="center">
-  <img src="computational_modeling/images/particle_attenuation.png" width="60%" />
+  <img src="computational_modeling/figures/particle_attenuation.svg" width="65%" />
 </p>
 <p align="center"><em>Simulating radiative transfer processes via inverse transform sampling.</em></p>
 

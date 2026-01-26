@@ -1,7 +1,8 @@
 # Galaxy Cluster Dark Matter Analysis: ACO 2670
 
 [![Return to Portfolio](https://img.shields.io/badge/⬅️_Back_to-Main_Portfolio-grey)](../README.md)
-![Python](https://img.shields.io/badge/Python-3.11%2B-blue)
+![Python](https://img.shields.io/badge/Python-3.12%2B-blue)
+[![CI](https://github.com/JacksonFergusonDev/data-science-portfolio/actions/workflows/ci.yml/badge.svg)](https://github.com/JacksonFergusonDev/data-science-portfolio/actions/workflows/ci.yml)
 ![Astropy](https://img.shields.io/badge/Astropy-Cosmology-orange)
 ![SciPy](https://img.shields.io/badge/SciPy-Optimization-green)
 
@@ -26,8 +27,8 @@ This project quantifies the dark matter content of a rich galaxy cluster by anal
 *The iterative sigma-clipping algorithm converged on a stable core of 98 galaxies (red), successfully isolating the cluster from the background field (gray).*
 
 <p float="left">
-  <img src="images/final_spatial_plot.png" width="48%" />
-  <img src="images/gmm_redshift_distribution.png" width="48%" /> 
+  <img src="figures/final_spatial_plot.svg" width="37%" />
+  <img src="figures/gmm_redshift_distribution.svg" width="58%" />
 </p>
 
 * **Left:** Final spatial configuration showing the 1.5 Mpc physical selection radius (dashed).
@@ -37,8 +38,8 @@ This project quantifies the dark matter content of a rich galaxy cluster by anal
 *By measuring how fast galaxies move and how light is distributed, we constrain the cluster's mass.*
 
 <p float="left">
-  <img src="images/peculiar_velocities_histogram.png" width="48%" />
-  <img src="images/cumulative_luminosity_distribution.png" width="48%" />
+  <img src="figures/peculiar_velocities_histogram.svg" width="48%" />
+  <img src="figures/cumulative_luminosity_distribution.svg" width="48%" />
 </p>
 
 * **Left:** Peculiar velocity dispersion ($\sigma_v \approx 932$ km/s). The width of this histogram is the direct proxy for the cluster's gravitational potential.
@@ -85,7 +86,17 @@ This project is part of my Data Science Portfolio. To reproduce the analysis:
     cd data-science-portfolio
     ```
 
-2.  **Install shared dependencies:**
+2.  **Environment Setup:**
+
+    **Modern (Recommended):**
+    This project is managed with [uv](https://github.com/astral-sh/uv). This will automatically handle Python versioning and virtual environments.
+    ```bash
+    # Sync dependencies and build the environment
+    uv sync
+    ```
+
+    **Legacy (pip):**
+    If you do not have `uv` installed, you can use standard pip:
     ```bash
     pip install -r requirements.txt
     ```
