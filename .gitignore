@@ -20,7 +20,6 @@ env/
 *.log
 *.out
 *.synctex.gz
-*.pdf
 
 # OS-specific
 .DS_Store
