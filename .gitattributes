@@ -1,0 +1,14 @@
+# Default behavior
+* text=auto
+
+# Tool-specific files
+uv.lock linguist-generated
+
+# Documentation and Figures (treat as binary to avoid massive text diffs)
+*.pdf binary
+*.svg binary
+
+# nbdime integration
+*.ipynb filter=nbdime
+*.ipynb diff=nbdime
+*.ipynb merge=nbdime
