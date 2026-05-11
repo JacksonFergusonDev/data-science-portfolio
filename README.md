@@ -1,11 +1,19 @@
+<!-- markdownlint-disable-file MD041 -->
+<div align="center">
+
 # Data Science & Computational Physics Portfolio
 
-![Python](https://img.shields.io/badge/Python-3.12%2B-blue)
-![License](https://img.shields.io/badge/License-MIT-purple)
-[![CI](https://github.com/JacksonFergusonDev/data-science-portfolio/actions/workflows/ci.yml/badge.svg)](https://github.com/JacksonFergusonDev/data-science-portfolio/actions/workflows/ci.yml)
-![Status](https://img.shields.io/badge/Status-Active-success)
-
 **A collection of computational pipelines bridging theoretical astrophysics, atmospheric science, and statistical inference.**
+
+![Status](https://img.shields.io/badge/status-archived-red?style=flat-square&labelColor=0A0A0A)
+[![uv](https://img.shields.io/badge/uv-enabled-white?style=flat-square&color=white&labelColor=black)](https://github.com/astral-sh/uv)
+[![Ruff](https://img.shields.io/badge/style-ruff-white?style=flat-square&color=white&labelColor=black)](https://github.com/astral-sh/ruff)
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-white?style=flat-square&color=white&labelColor=black)](https://github.com/pre-commit/pre-commit)
+[![Jupyter](https://img.shields.io/badge/jupyter-notebook-white?style=flat-square&color=white&labelColor=black)](https://jupyter.org/)
+![Python](https://img.shields.io/badge/python-3.12+-white?style=flat-square&color=white&labelColor=black)
+![License](https://img.shields.io/badge/license-MIT-white?style=flat-square&color=white&labelColor=black)
+
+</div>
 
 This repository documents a series of analysis projects focused on modeling physical systems from first principles. The work utilizes robust statistical methods—including MCMC, Maximum Likelihood estimation, and Monte Carlo simulations—to extract physical parameters from noisy observational data.
 
